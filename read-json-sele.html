@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Membaca File Json</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+<body>
+    <h1>TOP 100 SMARTPHONES</h1>
+    <div id="hasilscraping-2"></div>
+</body>
+<script type="text/javascript">
+    $(function(){
+        $.get('hasilscraping.json',function(obj){
+            var str = "<table border=1>";
+            str +="<tr><td>Rank</td><td>Image</td><td>Model</td><td>Processor</td><td>Waktu Scrapping</td></tr>";
+            $.each(obj, function(n, data){
+                str +="<tr><td>" + data.Rank + "</td>";
+                str +="<td>" + data.Image + "</td>";
+                str +="<td>" + data.Model + "</td>";
+                str +="<td>" + data.Processor + "</td>";
+                str +="<td>" + data.Waktu_Scraping + "</td></tr>";
+            });
+            str +="</table>";
+            $('#hasilscraping').html(str);
+        });
+    });
+</script>
+</html>
