@@ -11,7 +11,7 @@
 </body>
 <script type="text/javascript">
     $(function(){
-        $.get('hasilscraping.json',function(obj){
+        $.get('hasilscraping-2.json',function(obj){
             var str = "<table border=1>";
             str +="<tr><td>Rank</td><td>Image</td><td>Model</td><td>Processor</td><td>Waktu Scrapping</td></tr>";
             $.each(obj, function(n, data){
@@ -22,7 +22,7 @@
                 str +="<td>" + data.Waktu_Scraping + "</td></tr>";
             });
             str +="</table>";
-            $('#hasilscraping').html(str);
+            $('#hasilscraping-2').html(str);
         });
     });
 </script>
