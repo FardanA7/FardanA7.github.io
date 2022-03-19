@@ -16,7 +16,7 @@
             str +="<tr><td>Rank</td><td>Image</td><td>Model</td><td>Processor</td><td>Waktu Scrapping</td></tr>";
             $.each(obj, function(n, data){
                 str +="<tr><td>" + data.Rank + "</td>";
-                str +="<td>" + data.Image + "</td>";
+                str +='<td><img src= "' + data.Image + '" width="83" height="117"></td>';
                 str +="<td>" + data.Model + "</td>";
                 str +="<td>" + data.Processor + "</td>";
                 str +="<td>" + data.Waktu_Scraping + "</td></tr>";
